@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SearchBar from './SearchBar';
+import Card from "./Card";
 
 const WeatherPanel = () => {
     let urlWeather = 'https://api.openweathermap.org/data/2.5/weather?appid=ec17bfd6cca26a4a74ec5541591d68a1&lang=es&q=';
@@ -48,6 +49,12 @@ const WeatherPanel = () => {
         <React.Fragment>
             <SearchBar
                 newLocation = {getLocation}
+            />
+            <Card
+                showData = {show}
+                loadingData = {loading}
+                weatherData = {weather}
+                forecasData = {forecast}
             />
         </React.Fragment>
     );

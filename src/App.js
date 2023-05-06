@@ -1,14 +1,15 @@
 import './assets/css/App.css';
 
 import NavBar from './components/NavBar';
-import SearchBar from './components/SearchBar';
+import WeatherPanel from './components/WeatherPanel';
+
 
 function App() {
   return (
     <div className="App">
 
       <NavBar/>
-      <SearchBar/>
+      <WeatherPanel/>
 
     </div>
   );

@@ -1,11 +1,13 @@
 import React, {useState} from "react";
 
-const SearchBar = () => {
-    const [city,setCity] = useState("Santiago");
+const SearchBar = ({newLocation}) => {
+    const [city,setCity] = useState("");
 
     const onSubmit =(e) => {
         e.preventDefault();
-        console.log({city});
+        console.log("console log: city", {city});
+
+        newLocation(city);
     }
 
     return (

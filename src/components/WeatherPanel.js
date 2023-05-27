@@ -38,6 +38,8 @@ const WeatherPanel = () => {
         }).then((forecastData) => {
             console.log("console log: forecastData", forecastData);
             setForecast(forecastData);
+            setLoading(false);
+            setShow(true);
         }).catch(error => {
             console.log("console log: forecastData error", error);
             setLoading(false);
